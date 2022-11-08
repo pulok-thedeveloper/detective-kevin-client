@@ -4,7 +4,7 @@ import { FaPhone, FaEnvelope, FaPeriscope } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-200 text-base-content">
+        <footer className="footer justify-around p-10 bg-base-200 text-base-content">
             <div className='grid justify-center'>
                 <div>
                     <img className='w-16 mx-auto' src={logo} alt="" />
