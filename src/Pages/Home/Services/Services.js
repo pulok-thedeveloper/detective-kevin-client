@@ -6,7 +6,7 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("service.json")
+        fetch("http://localhost:5000/services")
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -19,7 +19,7 @@ const Services = () => {
                     services.map((service, dex) => dex < 3 && <ServiceCard key={service._id} service={service}></ServiceCard>)
                 }
             </div>
-            <Link to='/allservices'>
+            <Link to='/services'>
                 <button className="btn btn-outline">Show All</button>
             </Link>
         </div>

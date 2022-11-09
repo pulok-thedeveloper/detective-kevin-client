@@ -9,8 +9,8 @@ const Header = () => {
     const menuItems = <>
         <li>
             <Link to='/'>Home</Link>
-            <Link to='/allservices'>Services</Link>
-            <Link to='/'>Blogs</Link>
+            <Link to='/services'>Services</Link>
+            <Link to='/blogs'>Blogs</Link>
             {
                 user?.uid ?
                     <>
