@@ -2,39 +2,56 @@ import React from 'react';
 import img1 from '../../../assets/Header/1.jpg';
 import img2 from '../../../assets/Header/2.jpg';
 import img3 from '../../../assets/Header/3.jpg';
+import BannerItem from './BannerItem';
+
+
+const sliderData =[
+    {
+        image: img1,
+        title: {
+            first: 'The Best Private',
+            second: 'Investigation',
+            third: 'Services',
+        },
+        prev: 3,
+        id: 1,
+        next: 2
+    },
+    {
+        image: img2,
+        title: {
+            first: 'Know The Truth',
+            second: 'For Peace of',
+            third: 'Mind',
+        },
+        prev: 1,
+        id: 2,
+        next: 3
+    },
+    {
+        image: img3,
+        title: {
+            first: "Let's Hire",
+            second: 'a Private',
+            third: 'Investigator',
+        },
+        prev: 2,
+        id: 3,
+        next: 1
+    }
+]
+
 
 const Banner = () => {
     return (
-        <div className="carousel w-full">
-            <div id="slide1" className="carousel-item relative w-full">
-                <img src={img1} alt="" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" className="btn btn-circle">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide2" className="carousel-item relative w-full">
-                <img src={img2} alt="" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide3" className="carousel-item relative w-full">
-                <img src={img3} alt="" className="w-full" />
+        <div className="carousel w-full rounded my-5">
 
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="btn btn-circle">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide4" className="carousel-item relative w-full">
-                <img src="https://placeimg.com/800/200/arch" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" className="btn btn-circle">❮</a>
-                    <a href="#slide1" className="btn btn-circle">❯</a>
-                </div>
-            </div>
+        {
+            sliderData.map(slide=> <BannerItem
+            key={slide.id}
+            slide={slide}
+            ></BannerItem>)
+        }
         </div>
     );
 };
