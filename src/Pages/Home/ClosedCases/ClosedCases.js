@@ -5,7 +5,7 @@ const ClosedCases = () => {
     const [closedCases, setClosedCases] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/closedcases")
+        fetch("https://detective-kevin-server-pulok-thedeveloper.vercel.app/closedcases")
             .then(res => res.json())
             .then(data => setClosedCases(data))
     }, [])

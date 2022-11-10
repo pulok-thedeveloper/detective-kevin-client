@@ -7,7 +7,7 @@ const AddService = () => {
     useTitle('Add Service');
     const [serviceLength, setLength] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/services")
+        fetch("https://detective-kevin-server-pulok-thedeveloper.vercel.app/services")
             .then(res => res.json())
             .then(data => setLength(data.length))
     }, [])
@@ -30,7 +30,7 @@ const AddService = () => {
         }
         console.log(service)
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://detective-kevin-server-pulok-thedeveloper.vercel.app/services', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"

@@ -21,12 +21,12 @@ const router = createBrowserRouter([
             },
             {
                 path: '/services',
-                loader: ()=> fetch('http://localhost:5000/services'),
+                loader: ()=> fetch('https://detective-kevin-server-pulok-thedeveloper.vercel.app/services'),
                 element: <AllServices></AllServices>
             },
             {
                 path: '/services/:id',
-                loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({params})=> fetch(`https://detective-kevin-server-pulok-thedeveloper.vercel.app/services/${params.id}`),
                 element: <ServiceDetail></ServiceDetail>
             },
             {

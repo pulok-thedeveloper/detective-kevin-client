@@ -15,7 +15,7 @@ const MyReviewCard = ({ myreview }) => {
   };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://detective-kevin-server-pulok-thedeveloper.vercel.app/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setservice(data))
     }, [serviceId])
@@ -23,7 +23,7 @@ const MyReviewCard = ({ myreview }) => {
     const handleEdit = event => {
         event.preventDefault();
         console.log(reviewMessage);
-        fetch(`http://localhost:5000/reviews/${myreview._id}`,{
+        fetch(`https://detective-kevin-server-pulok-thedeveloper.vercel.app/reviews/${myreview._id}`,{
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ const MyReviewCard = ({ myreview }) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you want to delete this review')
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://detective-kevin-server-pulok-thedeveloper.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
