@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ClosedCaseCard = ({closedCase}) => {
-    const {title, picture, date, location, client} = closedCase;
+    const {_id,title, picture, date, location, client} = closedCase;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure><img src={picture} alt="Shoes" /></figure>

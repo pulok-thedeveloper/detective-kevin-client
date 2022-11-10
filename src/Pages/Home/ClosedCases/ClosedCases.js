@@ -5,7 +5,7 @@ const ClosedCases = () => {
     const [closedCases, setClosedCases] = useState([]);
 
     useEffect(() => {
-        fetch("closedcases.json")
+        fetch("http://localhost:5000/closedcases")
             .then(res => res.json())
             .then(data => setClosedCases(data))
     }, [])
