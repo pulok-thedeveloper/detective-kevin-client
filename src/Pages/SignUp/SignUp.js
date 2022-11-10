@@ -4,8 +4,10 @@ import { FcGoogle } from "react-icons/fc";
 import logo from '../../assets/detective-logo.png';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../../hook/useTitle';
 
 const SignUp = () => {
+    useTitle('Sign Up');
     const {createUser, signInwithGoogle} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();

@@ -3,8 +3,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../assets/detective-logo.png';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
+import useTitle from '../../hook/useTitle';
 
 const Login = () => {
+    useTitle('Login');
     const {login, signInwithGoogle} =useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();

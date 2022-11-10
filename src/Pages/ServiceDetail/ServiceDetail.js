@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import useTitle from '../../hook/useTitle';
 import ReviewCard from './ReviewCard';
 
 
 const ServiceDetail = () => {
+    useTitle('Service Details');
     const { user } = useContext(AuthContext);
 
     const service = useLoaderData();
