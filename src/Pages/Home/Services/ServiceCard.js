@@ -16,6 +16,7 @@ const ServiceCard = ({service}) => {
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
+                <p>Price : </p>
                 <p>{about.slice(0, 80)}...</p>
                 <div className="card-actions">
                     <Link to={`/services/${_id}`}>

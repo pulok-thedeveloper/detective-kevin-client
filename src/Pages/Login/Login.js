@@ -8,7 +8,7 @@ const Login = () => {
     const {login, signInwithGoogle} =useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || '/'
 
     const handleLogin = event => {
         event.preventDefault();
@@ -29,7 +29,7 @@ const Login = () => {
         signInwithGoogle()
         .then(result => {
             console.log(result.user)
-            navigate(from, {replace: true});
+            navigate(from, { replace: true });
         })
         .catch(error=> console.error(error))
     }
