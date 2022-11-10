@@ -16,12 +16,16 @@ const MyReviews = () => {
     return (
         <div>
             <h1 className='text-4xl font-bold my-5'>My Reviews</h1>
-            <div className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mb-10'>
-                {
-                    reviews.map(myreview => <MyReviewCard key={myreview._id} myreview={myreview}></MyReviewCard>)
-                }
-            </div>
-            
+            {
+                reviews.length > 0 ?
+                    <div className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mb-10'>
+                        {
+                            reviews.map(myreview => <MyReviewCard key={myreview._id} myreview={myreview}></MyReviewCard>)
+                        }
+                    </div>:
+                    <p className='my-5'>No Reviews Were Added</p>
+            }
+
         </div>
     );
 };
